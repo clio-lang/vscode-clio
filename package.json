@@ -1,0 +1,31 @@
+{
+    "name": "clio-lang",
+    "displayName": "clio-lang",
+    "description": "Syntax highlighting for the Clio Programming Language",
+    "version": "0.0.1",
+    "publisher": "Michele Riva",
+    "author": {
+        "email": "ciao@micheleriva.it",
+        "name": "Michele Riva"
+    },
+    "engines": {
+        "vscode": "^1.32.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "icon": "images/logo.png",
+    "contributes": {
+        "languages": [{
+            "id": "clio",
+            "aliases": ["Clio", "clio"],
+            "extensions": [".clio"],
+            "configuration": "./Clio.configuration.json"
+        }],
+        "grammars": [{
+            "language": "clio",
+            "scopeName": "source.clio",
+            "path": "./syntaxes/clio.tmLanguage.json"
+        }]
+    }
+}
