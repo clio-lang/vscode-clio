@@ -26,6 +26,12 @@
             "language": "clio",
             "scopeName": "source.clio",
             "path": "./syntaxes/clio.tmLanguage.json"
-        }]
+        }],
+        "snippets": [
+            {
+                "language": "clio",
+                "path": "./snippets.json"
+            }
+        ]
     }
 }
