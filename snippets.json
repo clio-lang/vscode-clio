@@ -1,0 +1,22 @@
+{
+  "Function": {
+    "prefix": "fn",
+    "body": ["fn ${1:name} ${2:parameters}:", "\t$0"],
+    "description": "Function definition"
+  },
+  "Eager Function": {
+    "prefix": "eager",
+    "body": ["@eager", "fn ${1:name} ${2:parameters}:", "\t$0"],
+    "description": "Eager function definition"
+  },
+  "Function call": {
+    "prefix": "->",
+    "body": ["${1: parameters} -> ${0:function}"],
+    "description": "Function call"
+  },
+  "Import": {
+    "prefix": "import",
+    "body": ["import ${1} from ${0:module}"],
+    "description": "Import statement"
+  }
+}
