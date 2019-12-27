@@ -107,14 +107,29 @@
 					"begin": "(^|[\\[\\(\\s])(\\')",
 					"beginCaptures": {
 						"2": {
-							"name": "punctuation.clio"
+							"name": "string.single.clio"
 						}
 					},
 					"contentName": "string.single.clio",
 					"end": "(?<!\\\\)(\\')",
 					"endCaptures": {
 						"1": {
-							"name": "punctuation.clio"
+							"name": "string.single.clio"
+						}
+					}
+				},
+				{
+					"begin": "(^|[\\[\\(\\s])(\")",
+					"beginCaptures": {
+						"2": {
+							"name": "string.double.clio"
+						}
+					},
+					"contentName": "string.double.clio",
+					"end": "(?<!\\\\)(\")",
+					"endCaptures": {
+						"1": {
+							"name": "string.double.clio"
 						}
 					}
 				},
