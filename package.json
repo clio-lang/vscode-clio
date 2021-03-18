@@ -49,7 +49,7 @@
 				"clio.languageServer.enabled": {
 					"type": "boolean",
 					"default": false,
-					"description": "Set to 'true' to enable smarter language support (e.g. hover, code completion, ...) for Clio. Requires specifying the command for launching the language server under 'clio.languageServer.command'"
+					"description": "Set to 'true' to enable smarter language support (e.g. hover, code completion, ...) for Clio. Requires 'clio-language-server' to be on your PATH."
 				},
 				"clio.languageServer.command": {
 					"type": "string",
