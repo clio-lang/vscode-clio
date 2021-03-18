@@ -53,7 +53,7 @@
 				},
 				"clio.languageServer.command": {
 					"type": "string",
-					"default": "clio-language-server",
+					"default": "clio-language-server --stdio",
 					"description": "The command for launching the language server."
 				},
 				"clio.languageServer.cwd": {
