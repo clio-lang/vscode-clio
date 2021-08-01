@@ -29,7 +29,7 @@
           "name": "keyword.clio"
         },
         {
-          "match": "(\\s|[\\[\\]]|^)(hash|fn|parallel|and|or|not|if|else|await|import|export|from|as)\\b",
+          "match": "(\\s|[\\[\\]]|^)(in|fn|and|or|not|if|else|await|import|export|from|as)\\b",
           "name": "keyword.clio"
         },
         {
@@ -57,7 +57,7 @@
           "name": "constant.numeric.clio"
         },
         {
-          "begin": "(^|[\\[\\(\\s])(\\\")",
+          "begin": "(?<!\\\\)(\\\")",
           "beginCaptures": {
             "2": {
               "name": "punctuation.clio"
