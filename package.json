@@ -1,7 +1,7 @@
 {
 	"name": "clio-lang",
 	"displayName": "clio-lang",
-	"description": "Syntax highlighting for the Clio Programming Language",
+	"description": "Language support for the Clio Programming Language",
 	"version": "0.0.1",
 	"publisher": "micheleriva",
 	"author": {
@@ -15,6 +15,7 @@
 		"Programming Languages"
 	],
 	"icon": "images/logo.png",
+	"main": "./out/extension",
 	"contributes": {
 		"languages": [
 			{
@@ -41,11 +42,46 @@
 				"language": "clio",
 				"path": "./snippets.json"
 			}
-		]
+		],
+		"configuration": {
+			"title": "Clio configuration",
+			"properties": {
+				"clio.languageServer.enabled": {
+					"type": "boolean",
+					"default": false,
+					"description": "Set to 'true' to enable smarter language support (e.g. hover, code completion, ...) for Clio. Requires 'clio-language-server' to be on your PATH."
+				},
+				"clio.languageServer.command": {
+					"type": "string",
+					"default": "clio-language-server --stdio",
+					"description": "The command for launching the language server."
+				},
+				"clio.languageServer.cwd": {
+					"type": "string",
+					"default": "",
+					"description": "If specified, the directory in which the language server will be executed."
+				}
+			}
+		}
 	},
 	"__metadata": {
 		"id": "4baba148-e68c-4de8-86f7-9e5a65e0cf32",
 		"publisherDisplayName": "MicheleRiva",
 		"publisherId": "4506c990-acaa-4bc1-a599-cc1c5bc585e6"
+	},
+	"activationEvents": [
+		"onLanguage:clio"
+	],
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc -w"
+	},
+	"devDependencies": {
+		"@types/node": "^14.14.35",
+		"@types/vscode": "^1.54.0",
+		"typescript": "^4.2.3"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^7.0.0"
 	}
 }
