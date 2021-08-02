@@ -3,7 +3,7 @@
   "displayName": "clio-lang",
   "description": "Language support for the Clio Programming Language",
   "version": "0.0.1",
-  "publisher": "micheleriva",
+  "publisher": "clio",
   "author": {
     "email": "ciao@micheleriva.it",
     "name": "Michele Riva"
