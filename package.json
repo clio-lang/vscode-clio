@@ -2,7 +2,7 @@
   "name": "clio-lang",
   "displayName": "Clio Language Support",
   "description": "Language support for the Clio Programming Language",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "publisher": "clio",
   "author": {
     "email": "ciao@micheleriva.it",
