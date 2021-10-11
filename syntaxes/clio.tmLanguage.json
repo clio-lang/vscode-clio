@@ -29,7 +29,42 @@
           "name": "keyword.clio"
         },
         {
-          "match": "(\\s|[\\[\\]]|^)(in|fn|and|or|not|if|else|await|import|export|from|as)\\b",
+          "match": "( |^)type +([^ :]+)( +|:)",
+          "captures": {
+            "2": {
+              "name": "entity.name.type.class.clio"
+            }
+          },
+          "name": "keyword.clio"
+        },
+        {
+          "match": "( |^)list +([^ :]+)( +|:)",
+          "captures": {
+            "2": {
+              "name": "entity.name.type.class.clio"
+            }
+          },
+          "name": "keyword.clio"
+        },
+        {
+          "match": "is +([^ :]+)( +|:)",
+          "captures": {
+            "1": {
+              "name": "entity.name.type.class.clio"
+            }
+          },
+          "name": "keyword.clio"
+        },
+        {
+          "match": "(\\s|[\\[\\]]|^)(type|list|in|is|fn|and|or|not|if|else|await|import|export|from|as)\\b",
+          "name": "keyword.clio"
+        },
+        {
+          "match": "(\\s|[\\[\\]]|^)(Object|String|Number|Date|Array)\\b",
+          "name": "support.class.clio"
+        },
+        {
+          "match": "(\\s|[\\[\\]]|^)#\\s",
           "name": "keyword.clio"
         },
         {
@@ -49,8 +84,8 @@
           "name": "symbol.clio"
         },
         {
-          "match": "(@(\\b\\d+)?)",
-          "name": "constant.other.clio"
+          "match": "(@[^\\s]+)",
+          "name": "variable.other.constant.clio"
         },
         {
           "match": "(\\b\\d+)",
@@ -104,22 +139,6 @@
         {
           "match": "(--.*)",
           "name": "comment.clio"
-        },
-        {
-          "begin": "\\+-+",
-          "beginCaptures": {
-            "0": { "name": "comment.clio" }
-          },
-          "contentName": "comment.clio",
-          "patterns": [
-            {
-              "include": "#comment"
-            }
-          ],
-          "end": "-+\\+",
-          "endCaptures": {
-            "0": { "name": "comment.clio" }
-          }
         }
       ]
     }
